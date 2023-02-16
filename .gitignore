@@ -126,5 +126,5 @@ local_settings.py
 _local_settings.py
 static/
 
-# add aga
+# add correctt
 !db.sqlite3
