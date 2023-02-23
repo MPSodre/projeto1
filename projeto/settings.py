@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-n7#rfvqe$rv@z)s5pbsdk1$q#q1!a%0bwkywfp1%!8t-xil@vi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -57,7 +57,7 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             BASE_DIR / "base_templates",
-            BASE_DIR / "recipes" / "templates_temp"
+
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -120,6 +120,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    BASE_DIR / "base_static",
+]
+
+STATIC_ROOT = BASE_DIR / 'static'
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
